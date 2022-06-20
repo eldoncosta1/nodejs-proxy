@@ -10,8 +10,8 @@ Project to validate Http Proxy Middleware with Express
 
 ## To run project
 
-`npm run dev && npm run proxy`js
+`npm run dev && npm run proxy`
 
 ## To validate Http Proxy Middleware
 
-`Send get request http to http://localhost:4444`js
+`Send get request http to http://localhost:4444`
