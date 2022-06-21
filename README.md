@@ -5,12 +5,12 @@ Project to validate Http Proxy Middleware with Express
 ## Dependencies:
 
 - express
-- ts node dev
+- ts-node-dev
 - http-proxy-middleware
 
 ## To run project
 
-`npm run dev && npm run proxy`
+`npm run proxy && npm run server`
 
 ## To validate Http Proxy Middleware
 
