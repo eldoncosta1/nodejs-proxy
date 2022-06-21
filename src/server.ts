@@ -3,6 +3,8 @@ import "dotenv/config";
 
 import express, { json, NextFunction, Request, Response } from "express";
 
+import routes from "routes";
+
 const app = express();
 
 app.use(json());
@@ -17,21 +19,7 @@ var injectToken = function (req: Request, res: Response, next: NextFunction) {
 
 app.use(injectToken);
 
-app.get("/secret/api", (req, res) => {
-  res.send("Hello world proxy api");
-});
-
-app.get("/secret", (req, res) => {
-  res.send("Hello world proxy");
-});
-
-app.get("/secret/users/:id", (req, res) => {
-  const id = req.params;
-
-  res.json({
-    message: id,
-  });
-});
+app.use(routes);
 
 app.use((err: Error, request: Request, response: Response, _: NextFunction) => {
   console.error(err.message);

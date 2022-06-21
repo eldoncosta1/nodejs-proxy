@@ -12,9 +12,9 @@ import {
 const app = express();
 
 app.use(
-  "/",
+  "/api",
   createProxyMiddleware({
-    target: "http://localhost:5555/secret",
+    target: "http://localhost:5555",
     changeOrigin: true,
     onProxyReq: function onProxyReq(proxyReq, req, res) {
       proxyReq.setHeader(

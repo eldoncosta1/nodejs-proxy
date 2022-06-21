@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "proxy": "NODE_ENV=dev ts-node-dev -r tsconfig-paths/register --inspect --respawn --transpile-only --exit-child --ignore-watch node_modules proxy.ts",
-    "server": "NODE_ENV=dev ts-node-dev -r tsconfig-paths/register --inspect --respawn --transpile-only --exit-child --ignore-watch node_modules ./server.ts"
+    "proxy": "NODE_ENV=dev ts-node-dev -r tsconfig-paths/register --inspect --respawn --transpile-only --exit-child --ignore-watch node_modules ./src/proxy.ts",
+    "server": "NODE_ENV=dev ts-node-dev -r tsconfig-paths/register --inspect --respawn --transpile-only --exit-child --ignore-watch node_modules ./src/server.ts"
   },
   "author": "",
   "license": "ISC",
