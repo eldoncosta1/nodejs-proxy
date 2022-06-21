@@ -8,13 +8,11 @@ const app = express();
 app.use(json());
 
 var injectToken = function (req: Request, res: Response, next: NextFunction) {
-  console.log("injectToken");
   const xAuthToken = req.headers["x-auth-token"];
   console.log(req.headers);
   if (xAuthToken !== process.env.AUTH_TOKEN) {
     throw new Error("Unauthorized");
   }
-  // res.setHeader("injection-token", "abc");
   next();
 };
 

@@ -23,9 +23,8 @@ app.use(
       );
     },
     onProxyRes: function onProxyRes(proxyRes, req, res) {
-      console.log(JSON.stringify(proxyRes.headers, null, 2));
+      // console.log(JSON.stringify(proxyRes.headers, null, 2));
       delete proxyRes.headers["injection-token"];
-      console.log(JSON.stringify(proxyRes.headers, null, 2));
     },
     onError: function onError(err, req, res) {
       console.log(err);
@@ -34,5 +33,5 @@ app.use(
 );
 
 app.listen(4444, () => {
-  console.log("Server listen on port 4444");
+  console.log("Proxy server listen on port 4444");
 });
