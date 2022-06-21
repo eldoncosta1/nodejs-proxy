@@ -9,7 +9,6 @@ app.use(json());
 
 var injectToken = function (req: Request, res: Response, next: NextFunction) {
   const xAuthToken = req.headers["x-auth-token"];
-  console.log(req.headers);
   if (xAuthToken !== process.env.AUTH_TOKEN) {
     throw new Error("Unauthorized");
   }
